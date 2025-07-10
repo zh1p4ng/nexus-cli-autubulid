@@ -56,19 +56,4 @@ cd nexus-cli/clients/cli
 echo "🔨 编译中..."
 cargo build --release
 
-# === 安装到 ~/.nexus/bin 并配置 PATH ===
-# echo "🗂️ 拷贝执行文件到 ~/.nexus/bin..."
-# mkdir -p ~/.nexus/bin
-# cp ./target/release/nexus-cli ~/.nexus/bin/
-# cp ./target/release/nexus-network ~/.nexus/bin/
-
-# if ! grep -q 'export PATH="$HOME/.nexus/bin:$PATH"' ~/.zshrc; then
-#   echo 'export PATH="$HOME/.nexus/bin:$PATH"' >> ~/.zshrc
-# fi
-# source ~/.zshrc
-cd target/release
-
-# === 启动 Nexus 节点 ===
-echo ""
-echo "🚀 启动 Nexus 节点（ID: $NODE_ID）..."
-./nexus-network start --node-id "$NODE_ID"
+echo "✅ 编译成功"
